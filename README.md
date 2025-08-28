@@ -12,7 +12,8 @@
   - Jeremías Sirur Flores
 
 ## Consigna y Actividades
-<p>Crea una aplicación GUI en Java que simule un formulario de login. La interfaz debe contener los siguientes elementos:
+<p>Crea una aplicación GUI en Java que simule un formulario de login. La interfaz debe contener los siguientes elementos:</p>
+
 - Un campo de texto <i>(JTextField)</i> para que el usuario pueda ingresar su mail.
 - Un campo de texto <i>(JPasswordField)</i> para que el usuario pueda ingresar su password.
 - Un botón <i>(JButton)</i> con el texto "Registrar".</p>
