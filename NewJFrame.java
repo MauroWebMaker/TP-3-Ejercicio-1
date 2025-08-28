@@ -1,4 +1,5 @@
 
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 
@@ -17,6 +18,11 @@ public class NewJFrame extends javax.swing.JFrame {
      * Creates new form NewJFrame
      */
     public NewJFrame() {
+        ImageIcon iconoVer = new ImageIcon("imagenes/dasas.png");
+        ImageIcon iconoOcultar = new ImageIcon("imagenes/das.png");
+        //Ver.setIcon(iconoVer);
+       // Ocultar.setIcon(iconoOcultar);
+       //no pude agregarle las imagenes a la carpeta del archivo. -agus
         initComponents();
     }
 
@@ -288,13 +294,13 @@ public class NewJFrame extends javax.swing.JFrame {
         // Y esto limpia ese arreglo después de su uso por motivos de seguridad (para todo esto me ayudó la IA eh, no piensen que lo hice solo xd)
         java.util.Arrays.fill(contraseñaChars, ' ');
 
-        System.out.println(correo + contraseña);
-        if (correo.equalsIgnoreCase(validacionCorreo) && contraseña.equalsIgnoreCase(validacionContraseña)) {
-            JOptionPane.showMessageDialog(rootPane, "BIENVENIDO","Inicio sesion exitoso", HEIGHT);
-   
+        System.out.println("Correo: "+correo +", Contraseña: "+ contraseña);
+        if (correo.isEmpty() && contraseña.isEmpty()) {
+            JOptionPane.showMessageDialog(rootPane, "Porfavor, ingrese datos","Error", JOptionPane.QUESTION_MESSAGE);
+        }else if (correo.equalsIgnoreCase(validacionCorreo) && contraseña.equalsIgnoreCase(validacionContraseña)) {
+            JOptionPane.showMessageDialog(rootPane, "BIENVENIDO","Inicio sesion exitoso", JOptionPane.INFORMATION_MESSAGE);
         }else{
-             JOptionPane.showMessageDialog(rootPane, "Error, ingrese datos validos", "SACA LA MANO DE AHI CARAJO", HEIGHT);
-
+             JOptionPane.showMessageDialog(rootPane, "Error, ingrese datos validos", "SACA LA MANO DE AHI CARAJO", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_RegistrarActionPerformed
 
