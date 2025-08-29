@@ -291,7 +291,7 @@ public class NewJFrame extends javax.swing.JFrame {
         char[] contraseñaChars = Contraseña.getPassword();
         // Acá los pasa a un String
         String contraseña = new String(contraseñaChars);
-        // Y esto limpia ese arreglo después de su uso por motivos de seguridad (para todo esto me ayudó la IA eh, no piensen que lo hice solo xd)
+        // Y esto limpia ese arreglo después de su uso por motivos de seguridad 
         java.util.Arrays.fill(contraseñaChars, ' ');
 
         System.out.println("Correo: "+correo +", Contraseña: "+ contraseña);
@@ -300,7 +300,7 @@ public class NewJFrame extends javax.swing.JFrame {
         }else if (correo.equalsIgnoreCase(validacionCorreo) && contraseña.equalsIgnoreCase(validacionContraseña)) {
             JOptionPane.showMessageDialog(rootPane, "BIENVENIDO","Inicio sesion exitoso", JOptionPane.INFORMATION_MESSAGE);
         }else{
-             JOptionPane.showMessageDialog(rootPane, "Error, ingrese datos validos", "SACA LA MANO DE AHI CARAJO", JOptionPane.ERROR_MESSAGE);
+             JOptionPane.showMessageDialog(rootPane, "Error, ingrese datos validos", "Error!", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_RegistrarActionPerformed
 
